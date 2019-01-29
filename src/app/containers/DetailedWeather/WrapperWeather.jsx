@@ -56,7 +56,7 @@ class Wrapper extends Component {
                     <Link
                         key={index} 
                         to={{
-                            pathname: `/detalinfo/city`,
+                            pathname: `/forecast/city`,
                             search: `?id=${city.id}&days=5`
                         }}
                         onClick={() => this.props.setCurrentCity(city)}
