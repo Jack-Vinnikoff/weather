@@ -1,0 +1,92 @@
+.wrapper_list_cityies{
+    padding-top: 20px;
+
+    & .wr_btn_add, .wrapper {
+        display: flex;
+        justify-content: center;
+
+        & .btn_add {
+            cursor: pointer;
+            font-size: 20px;
+            color: #ffffff;
+            text-transform: uppercase;
+            border: 1px solid #ffffff;
+            padding: 25px;
+    
+            &:hover {
+                border-color: #098215;
+            }
+        }
+    }
+
+    & .wrapper {
+        margin-top: 10px;
+        
+        & .wr_content_cityies {
+            width: 50%;
+
+            & .btn_for_content {
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 10px;
+            }
+
+            & .content_cityies {
+                max-height: 400px;
+                overflow-y: auto;
+                border-radius: 10px;
+                padding: 15px;
+
+                & .wr_item_city {
+                    margin-bottom:15px;
+                    padding: 10px;
+                    border: 1px solid #747373;
+
+                    & button {
+                        cursor: pointer;
+                        margin-top: 10px;
+                    }
+
+                    &:hover {
+                        border-color: #098215;
+                        transition: 0.4s
+                    }
+                }
+            }
+        }
+    }
+
+    & .item_city {
+        display: flex;
+        color: #ffffff;
+
+        & .info_panel {
+    
+            & .title_city {
+                color:#d26c22;
+                font-weight: bold;
+                font-size: 20px;
+            }
+    
+            & .descr_weather{
+                // color: black;
+                font-weight: bold;
+                padding-left: 10px;
+            }
+    
+            & .temp {
+                margin: 5px;
+                padding: 3px 7px;
+                border: 1px solid #ffff;
+                font-size: 16px;
+                font-weight: 700;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+    
+    & .more_info {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,10 @@
+body {
+    background: url('../assets/images/background.jpg') center center/cover no-repeat;
+    background-size: cover;
+}
+
+#app {
+    height: 100%;
+    position: relative;
+    background-color: rgba(8, 7, 7, 0.5)
+}

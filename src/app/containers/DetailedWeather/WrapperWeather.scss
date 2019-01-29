@@ -1,0 +1,42 @@
+.wrapper_detal_weather_menu {
+    display: flex;
+    min-height: 620px;
+    padding: 20px 20px 20px 10px;
+
+    & .menu_column {
+        min-width: 250px;
+        max-width: 250px;
+        padding: 15px;
+
+        & .fillter_city {
+            margin-bottom: 10px;
+
+            & input {
+                width: 70%;
+                height: 30px;
+                padding: 5px;
+                font-size: 14px;
+            }
+        }
+
+        & .button {
+            color: black;
+            font-size: 22px;
+            border: 1px solid #ffffff;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        & .active_button {
+            background-color: aqua;
+        }
+    }
+
+    & .wrapper_detailed_weather {
+        flex-grow: 1;
+        padding-left: 15px;
+    }
+}

@@ -1,0 +1,39 @@
+@import './theme.scss';
+@import './global.scss';
+
+html {
+    font-size: 14px;
+    font-weight: 200;
+  }
+  
+  html, body {
+     margin: 0;
+     padding: 0;
+     height: 100%;
+  }
+  
+  body * {
+      font-weight: 400;
+  }
+  
+  a {
+       text-decoration: none;
+       color: #ffffff;
+   }
+  
+  h1, div {
+      padding: 0;
+      margin: 0;
+  }
+  
+  button {
+      &:active, &:focus {
+          outline: none;
+      }
+  }
+
+  ul {
+      margin: 0;
+      padding: 0;
+  }
+  

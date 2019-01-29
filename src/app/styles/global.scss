@@ -1,0 +1,17 @@
+.bg {
+    background-color: rgba(28, 25, 25, 0.8);
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    margin-right: 15px;
+    color: #ffffff;
+    background-color: transparent;
+    
+    &:hover {
+        border-color: #098215;
+        transition: 1.6ms;
+    }
+}

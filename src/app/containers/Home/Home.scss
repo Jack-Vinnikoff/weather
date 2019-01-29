@@ -1,0 +1,148 @@
+.wrapper_home{
+    padding: 45px 0px 0px;
+    color: #ffffff;
+
+    & h1, div {
+        font-weight: bold;
+    }
+
+    & .main_block{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+
+        & .text_home_page{
+            font-size: 50px;
+
+            & span {
+                font-size: 24px;
+            }
+    
+            & .link {
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #ffff;
+                color: #fff
+            }
+        }
+
+        & .btn_show_widgit {
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+
+            &:active, &:focus {
+                outline: none;
+            }
+        }
+
+        & .wr_widgit_cityies {
+
+            & .widgit_cityies {
+                width: 200px;
+                min-height: 250px;
+                max-height: 250px;
+                overflow-y: auto;
+                height: 100%;
+
+                & .header_block {
+                    text-align: center;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    padding: 10px;
+                }
+
+                & span {
+                    text-align: center;
+                    display: block;
+                    font-size: 18px;
+                }
+
+                & .item_city {
+                    padding: 10px;
+                    font-size: 20px;
+                    text-align: center;
+                    cursor: pointer;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        border-bottom: 1px solid #ffffff;
+                    }
+                }
+
+                & .active {
+                    border: 1px solid #098215;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+    & .block_weather_city {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+
+        & .wrapper_btn_widgit {
+            display: flex;
+            justify-content: center;
+
+            & button {
+                color:#ffffff;
+                width: 100px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border: 1px solid #ffffff;
+            }
+        }
+
+        & .warn {
+            text-align: center;
+            font-size: 30px;
+            color: #6b6666;
+        }
+
+        & .wr_weather_content {
+            height: 240px;
+            position: relative;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding-top: 20px;
+
+            & .weather_content {
+                height: 50%;
+                display: flex;
+                flex-wrap: nowrap;
+
+                & .image {
+                    padding: 10px;
+
+                    & img {
+                        width: 80%;
+                    }
+                }
+            
+                & .city_name {
+                    
+                    & h1 {
+                        text-transform: uppercase;
+                        color: #c0633e;
+                        font-size: 30px;
+                    }
+
+                    & span {
+                        font-size: 20px;
+                    }
+
+                    & .temp {
+                        font-size: 30px;
+                        color: #83ae8e;
+                    }
+                }
+            }
+        }
+    }
+}

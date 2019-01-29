@@ -1,0 +1,54 @@
+.wr_add_city {
+
+    & .wr_input_add_city {
+        padding-bottom: 20px;
+
+        & input {
+            width: 60%;
+            height: 40px;
+            color: #ffffff;
+            padding-left: 10px;
+            font-size: 20px;
+            background-color: #000000;
+            border: none;
+            margin-right: 10px;
+        }
+
+        & button {
+            padding: 15px 10px 12px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            background-color: transparent;
+            text-transform: uppercase;
+            font-size: 16px;
+            cursor: pointer;
+
+            &:active, &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                border-color: #098215;
+            }
+        
+        }
+    }
+
+    & .wr_item_city {
+        position: relative;
+        border-top: 1px solid #ffffff;
+        width: 100%;
+        height: 100px;
+        color: #ffffff;
+        padding-top: 10px;
+    }
+
+    & .warn {
+        color: red;
+        font-size: 18px;
+    }
+
+    & .btn_footer {
+        
+    }
+}

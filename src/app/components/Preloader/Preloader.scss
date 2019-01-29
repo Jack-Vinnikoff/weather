@@ -1,0 +1,113 @@
+.preloader-wrap {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader {
+    margin: 0 auto;
+
+    & > div, &.md > div {
+        float: left;
+        width: 10px;
+        height: 10px;
+        background: #ffffff;
+
+        & + div {
+            margin-left: 2px;
+        }
+    }
+
+    &.lg > div {
+        width: 15px;
+        height: 15px;
+
+        & + div {
+            margin-left: 3px;
+        }
+    }
+
+    &.sm > div {
+        width: 7px;
+        height: 7px;
+
+        & + div {
+            margin-left: 2px;
+        }
+    }
+
+    &.xs > div {
+        width: 3px;
+        height: 3px;
+
+        & + div {
+            margin-left: 1px;
+        }
+    }
+}
+
+.point-1-animation {
+    -webkit-animation: opacity .75s infinite linear 0s;
+    -moz-animation:  opacity .75s infinite linear 0s;
+    -o-animation: opacity .75s infinite linear 0s;
+}
+
+.point-2-animation {
+    -webkit-animation: opacity .75s infinite linear .15s;
+    -moz-animation:  opacity .75s infinite linear .15s;
+    -o-animation: opacity .75s infinite linear .15s;
+}
+
+.point-3-animation {
+    -webkit-animation: opacity .75s infinite linear .3s;
+    -moz-animation:  opacity .75s infinite linear .3s;
+    -o-animation: opacity .75s infinite linear .3s;
+}
+
+.point-4-animation {
+    -webkit-animation: opacity .75s infinite linear .45s;
+    -moz-animation:  opacity .75s infinite linear .45s;
+    -o-animation: opacity .75s infinite linear .45s;
+}
+
+.point-5-animation {
+    -webkit-animation: opacity .75s infinite linear .6s;
+    -moz-animation:  opacity .75s infinite linear .6s;
+    -o-animation: opacity .75s infinite linear .6s;
+}
+
+.point-6-animation {
+    -webkit-animation: opacity .75s infinite linear .75s;
+    -moz-animation:  opacity .75s infinite linear .75s;
+    -o-animation: opacity .75s infinite linear .75s;
+}
+
+@-webkit-keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: .1;
+    }
+}
+
+@-moz-keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: .1;
+    }
+}
+
+@-o-keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: .1;
+    }
+}
