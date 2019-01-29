@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch, withRouter, RouteComponentProps, RouteProps, BrowserRouter } from 'react-router-dom'
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom'
 import Header from '../containers/Header/Header.jsx'
 import HomePage from '../containers/Home/Home.jsx'
 import ListCityies from '../containers/Cityies/Cityies.jsx'
@@ -14,6 +14,7 @@ class Routes extends Component {
                     <Route exact path="/" component={HomePage} />
                     <Route path="/cityies" component={ListCityies} />
                     <Route path="/forecast" component={WrapperWeather} />
+                    <Route render={() => <Redirect to="/" />} />
                 </Switch>
             </div>
         )

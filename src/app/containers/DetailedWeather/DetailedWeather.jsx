@@ -27,14 +27,12 @@ class DetailedWeather extends Component {
     }
 
     componentDidMount() {
-        console.log('start')
         this.getDataWeatherByIdCity()
     }
 
     getDataWeatherByIdCity = () => {
         const { location } = this.props
         const query = queryString.parse(location.search)
-        console.log('query', query)
         this.props.fetchWeatherData(query)
     }
 
@@ -42,8 +40,8 @@ class DetailedWeather extends Component {
         const { listForecast } = this.props
         return (
             <div className="wrapper_list_forecast">
-                {listForecast.map((item) => (
-                    <div className="forecast_weather">
+                {listForecast.map((item, index) => (
+                    <div className="forecast_weather" key={index}>
                         <span className="date">Date and Time: {item.dt_txt}</span>
                         <div className="wrapper_data_weather">
                             <div className="cell_data">
@@ -52,7 +50,7 @@ class DetailedWeather extends Component {
                             </div>
                             <div className="cell_data">
                                 <div className="title_field">Humidity</div>
-                                <div className="data_field">{item.main.humudity}%</div>
+                                <div className="data_field">{item.main.humidity}%</div>
                             </div>
                             <div className="cell_data">
                                 <div className="title_field">Clouds</div>
@@ -96,6 +94,7 @@ class DetailedWeather extends Component {
     handleViewMenu = () => this.setState({ isViewGraph: !this.state.isViewGraph })
 
     renderContent = () => {
+        const { isViewGraph } = this.state
         return (
             <div className="wrapper_content">
                 <div className="title_name">
@@ -104,7 +103,9 @@ class DetailedWeather extends Component {
                     <span className="country">{this.props.city.country}</span>
                     
                 </div>
-                <div className="button_menu" onClick={this.handleViewMenu}>Show List</div>
+                <div className="button_menu" onClick={this.handleViewMenu}>
+                    {isViewGraph ? 'Show List' : 'Show Graph'}
+                </div>
                 {this.state.isViewGraph && this.renderGraphForecastWeather() || this.rendeListrForecastWeather()}
             </div>
         )

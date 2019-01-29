@@ -40,7 +40,6 @@ function* fetchForecastWeather(action) {
 
         if (resp) {
             yield put(requestForecastWeatherDone(resp.data))
-            console.log('resp ====', resp)
         } else {
             yield put(requestForecastWeatherFailed())
         }

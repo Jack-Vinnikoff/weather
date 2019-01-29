@@ -22,7 +22,6 @@ class HomePage extends Component {
         const { currentCIty } = this.props
         if (this.props.currentCIty) {
             const { currentCIty } = this.props
-            console.log('currentCIty', currentCIty)
             this.props.getCityWeather(currentCIty.name)
         }
     }

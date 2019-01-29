@@ -2,25 +2,35 @@
     display: flex;
     min-height: 620px;
     padding: 20px 20px 20px 10px;
+    color: #ffffff;
+
+    & .link {
+        color: #098215;
+    }
 
     & .menu_column {
         min-width: 250px;
         max-width: 250px;
+        max-height: 600px;
+        overflow-y: auto;
         padding: 15px;
 
         & .fillter_city {
             margin-bottom: 10px;
 
             & input {
-                width: 70%;
+                box-sizing: border-box;
+                width: 100%;
                 height: 30px;
                 padding: 5px;
+                border: none;
+                color: #ffffff;
+                background-color: #000000;
                 font-size: 14px;
             }
         }
 
         & .button {
-            color: black;
             font-size: 22px;
             border: 1px solid #ffffff;
             text-align: center;
@@ -28,10 +38,15 @@
             text-transform: uppercase;
             display: block;
             margin-bottom: 10px;
+
+            &:hover {
+                border-color: #098215;
+                transition: 0.4s;
+            }
         }
 
         & .active_button {
-            background-color: aqua;
+            border-color: #098215;
         }
     }
 

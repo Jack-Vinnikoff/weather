@@ -39,8 +39,8 @@ class Wrapper extends Component {
 
     renderBlockError = () => (
         <React.Fragment>
-            <h3>no city added</h3>
-            <span>Click please here <Link to='/cityies'>List cityies</Link></span>    
+            <div>no city added</div>
+            <span>Click please here <Link to='/cityies'><span className="link">List cityies</span></Link></span>    
         </React.Fragment>
     )
     

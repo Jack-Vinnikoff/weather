@@ -4,8 +4,8 @@ import { withRouter, RouteComponentProps, RouteProps, Link } from 'react-router-
 import { Fade } from 'react-reveal'
 import { checkHasIcons } from '../../common/index.js'
 import { SMALL_SIZE, MEDIUM_SIZE } from '../../constants/index.js'
-import { getListCityies } from '../../store/modules/city/selector.js'
-import { removeCity, removeAllCityies, setCurrentCity } from '../../store/modules/city/index.js'
+import { getListCityies, getCityData } from '../../store/modules/city/selector.js'
+import { removeCity, removeAllCityies, setCurrentCity, clearCityData } from '../../store/modules/city/index.js'
 import Modal from '../../components/Modal/Modal.js';
 import AddCityModal from './AddCityModal/AddCityModal.jsx'
 import './Cityies.scss'
@@ -16,6 +16,12 @@ class ListCityies extends Component {
         this.state = {
             showModalAddCity: false
         };
+    }
+
+    componentDidMount() {
+        if (this.props.cityData) {
+            this.props.clearCityData()
+        }
     }
 
     openModalAddCity = () => {
@@ -109,7 +115,8 @@ class ListCityies extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    listCityies: getListCityies(state)
+    listCityies: getListCityies(state),
+    cityData: getCityData(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -121,6 +128,9 @@ const mapDispatchToProps = (dispatch) => ({
     },
     setCurrentCity(data) {
         dispatch(setCurrentCity(data))
+    },
+    clearCityData() {
+        dispatch(clearCItyData())
     }
 })
 
